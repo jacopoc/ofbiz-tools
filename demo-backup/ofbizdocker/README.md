@@ -7,8 +7,7 @@ Work under OFBIZ-12757 also created 3 experimental sites:
 * exp2.ofbiz.apache.org
 * exp3.ofbiz.apache.org
 
-These sites may be disabled at any time, but the hostnames will be left configured to enable rapid experimentation with 
-demo sites in the future.
+These sites may be disabled at any time, but the hostnames will be left configured to enable rapid experimentation with demo sites in the future.
 
 Files in this subdirectory of the ofbiz-tools repository reflect files which should be created on the root filesystem of ofbiz-vm1.apache.org with the following additions and/or settings:
 * /etc/cron.d/ofbizdocker
