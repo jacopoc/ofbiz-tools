@@ -72,9 +72,6 @@ buildSrc/build/**
 **/themes/common-theme/webapp/common-theme/js/jquery/**
 **/themes/common-theme/webapp/common-theme/js/plugins/**
 **/themes/common-theme/webapp/images/**
-######################### The line below is only for R18.12,
-**/themes/common-theme/webapp/common/js/**
-######################### should be removed when R18.12 will be deprecated
 **/themes/rainbowstone/webapp/rainbowstone/flags/**
 **/themes/rainbowstone/webapp/rainbowstone/images/**
 **/themes/rainbowstone/webapp/rainbowstone/fonts/quicksand/**
