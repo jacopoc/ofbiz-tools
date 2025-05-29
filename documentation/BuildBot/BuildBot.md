@@ -41,7 +41,7 @@ There is also the RAT builder. It checks the licenses in OFBiz. You can find the
 
 
 ### tests results
-Here are the [trunk test results](https://nightlies.apache.org/ofbiz/trunk/tests-results/). The framework results contain only the framework integration tests while the plugins results contain all the test for framework and plugins. You can find the same for the next and stable release branches. 
+Here are the [trunk test results](https://nightlies.apache.org/ofbiz/trunk/tests-results/). The framework results contain only the framework integration tests while the plugins results contain all the test for framework and plugins. You can find the same for the next and stable release branches.
 
 ### Technical information
 When you create a new branch you need to let know BuildBot about it. This because BuildBot uses Git hooks to triggers builds on commits. [The file to change is here](https://github.com/apache/infrastructure-p6/blob/production/modules/subversion_server/files/hooks/buildbot_project_paths). You can't clone, but you can make PRs via the github UI, just make a new branch and PR it.
@@ -51,14 +51,14 @@ When you create a new branch you need to let know BuildBot about it. This becaus
 
 Sometimes (rarely) you can get transient tests errors in BuildBot. This mean tests don't all pass in BuildBot, though they pass in your local instance. In such case, it's most certainly an issue with servers. Those are hard workers and make errors from time to time, which shows that not only human make errors :)
 
-Before doing anything it's best to check which BuildBot step is impacted, and if it exists have a look at the logfile (stdio) 
+Before doing anything it's best to check which BuildBot step is impacted, and if it exists have a look at the logfile (stdio)
 
 Some other errors may happen, like
 * Git not updating
 * upload not working
 * you name it...
 
-In such case, after logging in Buildbot using as credential your Apache email and your LDAP password, you can trigger a build from BuildBot UI to see if the problem resolves by itself. For that open the last commit and use the "Rebuid" button at top-right.
+In such case, after logging in Buildbot using as credential your Apache username (not your Apache email used in other places) and your LDAP password, you can trigger a build from BuildBot UI to see if the problem resolves by itself. For that open the last commit and use the "Rebuid" button at top-right.
 
 Most of the time tests and issues are resolved this way. If it does not then the best is to ask Infra help, either on [Infra Slack channel](https://the-asf.slack.com/archives/CBX4TSBQ8) or by creating an [Infra Jira issue](https://issues.apache.org/jira/projects/INFRA/summary).
 
@@ -68,7 +68,7 @@ Though today (2021-12-31) this seems to not happen anymore, one case which comes
 
 ### Creating a new branch
 1. Adapt existing next scheduler, builder, factory, modify the reference in common part and modify the "next" RAT builder in [the "ofbiz.py" OFBiz BuildBot script](https://svn.apache.org/repos/infra/infrastructure/buildbot2/projects). Most of the time only the names need to be changed...
-2. Ask Infra for a new directories structure for the tests (eg https://issues.apache.org/jira/browse/INFRA-17513)  
-3. Adds the new branches [in the Git file for project paths](https://github.com/apache/infrastructure-p6/blob/production/modules/subversion_server/files/hooks/buildbot_project_paths). You can't clone, but you can make PRs via the github UI, just make a new branch and PR it. When you create a new branch you need to let know BuildBot about it. This because BuildBot uses Git hooks to triggers builds on commits. 
+2. Ask Infra for a new directories structure for the tests (eg https://issues.apache.org/jira/browse/INFRA-17513)
+3. Adds the new branches [in the Git file for project paths](https://github.com/apache/infrastructure-p6/blob/production/modules/subversion_server/files/hooks/buildbot_project_paths). You can't clone, but you can make PRs via the github UI, just make a new branch and PR it. When you create a new branch you need to let know BuildBot about it. This because BuildBot uses Git hooks to triggers builds on commits.
 4. Remove old branches if no longer supported.
 
