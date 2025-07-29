@@ -52,3 +52,22 @@ A weekly cron job, /etc/cron.weekly/docker-system-prune, runs the `docker system
 
 ## Viewing logs
 For each demo instance (stable, next and trunk), the logs are respectively accessible under /home/ofbizdocker/[demo-stable|demo-next|demo-trunk]/logs
+
+## Letsencrypt certificate update
+It was a time when every 3 months we needed to manually update our Letsencrypt certificate. It was automated before, it's now again, so no worries. Anyway, if necessary it's quite easy to do so. Simply connect to the demo VM and run
+
+    sudo certbot renew
+
+I got this message today (2020-04-17):
+
+    Processing /etc/letsencrypt/renewal/ofbiz-vm1.apache.org.conf
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    Cert not yet due for renewal
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    The following certs are not due for renewal yet:
+      /etc/letsencrypt/live/ofbiz-vm1.apache.org/fullchain.pem expires on 2020-06-08 (skipped)
+    No renewals were attempted.
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+and always since: it's OK. Nothing to do, it's automated. :)
+In case you get an issue, simply restart the VM and restart the demos. That happened once: https://issues.apache.org/jira/browse/INFRA-23637
