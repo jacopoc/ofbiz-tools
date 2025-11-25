@@ -70,4 +70,4 @@ I got this message today (2020-04-17):
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 and always since: it's OK. Nothing to do, it's automated. :)
-In case you get an issue, simply restart the VM and restart the demos. That happened once: https://issues.apache.org/jira/browse/INFRA-23637
+In case you get an issue, simply reboot the VM and restart the demos. That happened once: https://issues.apache.org/jira/browse/INFRA-23637
