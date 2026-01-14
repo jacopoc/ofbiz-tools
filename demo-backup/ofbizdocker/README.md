@@ -22,6 +22,8 @@ Files in this subdirectory of the ofbiz-tools repository reflect files which sho
 
 At 02:35h UTC each day, the cronttab defined by `/etc/cron.d/ofbizdocker` will execute script `pull-and-restart.sh`. 
 
+>**Note that the plugins are only updated when a change in framework has been done.**  
+
 The `pull-and-restart.sh` script does the following:
 * For each directory in /home/ofbizdocker/[demo-stable, demo-next, demo-trunk, exp*]
   * Change to the directory.
